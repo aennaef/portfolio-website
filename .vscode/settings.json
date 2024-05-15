@@ -1,0 +1,16 @@
+{
+    "[javascript]": {
+        "editor.maxTokenizationLineLength": 120,
+        "editor.formatOnSave": true,
+
+    },
+    "[html]": {
+        "editor.formatOnSave": true,
+        "prettier.htmlSelfClosing": false
+
+    },
+    "[css]": {
+        "editor.formatOnSave": true,
+    }
+    
+}
