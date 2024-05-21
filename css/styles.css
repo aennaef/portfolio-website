@@ -1,0 +1,144 @@
+/* Colors used:
+Background color (white): #ffffff;
+Font color (black): #19181b;
+Neutral color (gray): #787878;
+Accent color (purple): #552bf7
+Accent color 50% opacity: #af9bff
+
+/* Typography */
+body {
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #19181b;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  background-color: #fff;
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #19181b;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+/* Setting image width to full screen width */
+img {
+  width: 100%;
+}
+
+/* Link styling */
+a {
+  color: #552bf7;
+  text-decoration: none;  /* No underlining */
+  transition: color 0.3s; /* Smooth transition */
+}
+
+a:visited { /* Visited link */
+  color: #552bf7;
+}
+
+a:hover,
+a:focus {
+  color: #af9bff; /* Switching colors when hovering over a link */
+}
+
+a:active { /* Selected link */
+  color: #552bf7;
+}
+
+/* Button styling */
+.button.primary {
+  display: inline-block;
+  background-color: #552bf7;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.button.primary:hover,
+.button.primary:focus {
+  background-color: #af9bff;
+}
+
+.button.primary:active {
+  background-color: #552bf7;
+}
+
+.button.secondary {
+  display: inline-block;
+  background-color: #fff;
+  color: #552bf7; /* needed to override the default link color */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid #552bf7;
+  font-weight: 600;
+  padding: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+  background-color: #552bf7;
+  color: #fff;
+}
+
+.button.secondary:active {
+  background-color: #fff;
+  color: #552bf7;
+}
+
+/* Navigation Styling */
+nav a.nav-link {
+  color: #787878; /* Ensure gray color is used */
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a.nav-link:hover,
+nav a.nav-link:focus {
+  color: #19181b; /* Change color on hover/focus */
+}
+
+#brand-logo {
+  color: #19181b;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* SVG hover effect in footer */
+footer svg {
+  fill: #19181b;
+  transition: fill 0.3s;
+}
+
+footer svg:hover {
+  fill: #787878; /* Color when hovered */
+}
