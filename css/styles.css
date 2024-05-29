@@ -3,13 +3,133 @@ Background color (white): #ffffff;
 Font color (black): #19181b;
 Neutral color (gray): #787878;
 Accent color (purple): #552bf7
-Accent color 50% opacity: #af9bff
+Accent color 50% opacity: #af9bff */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
+}
+
+/* General */
+
+.container { /* Content container on all pages */
+  padding: 0 1rem;
+  max-width: 1200px;
+}
+
+main { /* Leaves spave between header and h1 */
+  padding-top: 8.5rem;
+}
+
+img { /* Setting image width to full screen width */
+  width: 100%;
+}
+
+header { /* Container for navigation */
+  background-color: #fff;
+  text-align: left;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav { /* Navigation */
+  display: inline-block;
+  width: 100%;
+}
+
+nav > ul { /* Removes bullet points from navigation */
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a { /* Link styling for navigation */
+  padding: 0 2rem 2rem 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #787878;
+  transition: color 0.3s;
+}
+
+nav > ul > li > a:visited {
+  color: #787878;
+}
+
+nav > ul > li > a:hover,
+nav > ul > li > a:focus {
+  color: #19181b;
+}
+
+nav > ul > li > a:active {
+  color: #19181b;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav.a:visited {
+  color: #19181b;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #19181b;
+}
+
+nav a:active {
+  color: #19181b;
+}
+
+#brand-logo {
+  color: #19181b;
+  font-size: 2rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* Footer */
+
+hr.solid { /* Solid border for footer */
+  border-top: 0.0625rem solid #787878;
+}
+
+footer {
+  text-align: center;
+}
+
+footer svg { /* SVG hover effect in footer */
+  fill: #19181b;
+  transition: fill 0.3s;
+  border: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+footer svg:hover { /* Color when hovered */
+  fill: #787878;
+}
+
+footer h2 { /* Layout styling */
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
 
 /* Typography */
+
 body {
-  background-color: #fff;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
   color: #19181b;
@@ -19,38 +139,62 @@ h1,
 h2,
 h3,
 h4 {
-  background-color: #fff;
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   line-height: 1.4;
   color: #19181b;
+  margin: 0;
 }
 
 h1 {
-  font-size: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 h2 {
-  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem; /* 40px */
+}
+
+h2 {
+  font-size: 2rem; /* 32px */
+}
+
+h3 {
+  font-size: 1.5rem; /* 24px */
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.25rem; /* 20px */
 }
 
-/* Setting image width to full screen width */
-img {
-  width: 100%;
+em {
+  font-size: 0.75rem;
 }
 
 /* Link styling */
+
 a {
   color: #552bf7;
-  text-decoration: none;  /* No underlining */
   transition: color 0.3s; /* Smooth transition */
 }
 
@@ -68,24 +212,31 @@ a:active { /* Selected link */
 }
 
 /* Button styling */
-.button.primary {
+.button {
   display: inline-block;
   background-color: #552bf7;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  text-decoration: none;
+  letter-spacing: 0.063rem;
   font-weight: 600;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  width: 12.5rem;
+  height: 3.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
-.button.primary:hover,
-.button.primary:focus {
+.button:hover,
+.button:focus {
   background-color: #af9bff;
+  color: #fff;
 }
 
-.button.primary:active {
+.button:active {
   background-color: #552bf7;
 }
 
@@ -94,11 +245,17 @@ a:active { /* Selected link */
   background-color: #fff;
   color: #552bf7; /* needed to override the default link color */
   text-transform: uppercase;
-  letter-spacing: 1px;
-  border: 2px solid #552bf7;
+  text-decoration: none;
+  letter-spacing: 0.063rem;
+  border: 0.125rem solid #552bf7;
   font-weight: 600;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  width: 12.5rem;
+  height: 3.5rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
 }
 
@@ -113,32 +270,120 @@ a:active { /* Selected link */
   color: #552bf7;
 }
 
-/* Navigation Styling */
-nav a.nav-link {
-  color: #787878; /* Ensure gray color is used */
-  text-transform: uppercase;
-  font-size: 1.25rem;
-  font-weight: 500;
-  transition: color 0.3s;
+/* Work Page */
+
+.spacing-large {
+  margin-bottom: 3rem;
 }
 
-nav a.nav-link:hover,
-nav a.nav-link:focus {
-  color: #19181b; /* Change color on hover/focus */
+.spacing-medium {
+  margin-bottom: 2rem;
 }
 
-#brand-logo {
-  color: #19181b;
-  font-size: 2rem;
-  font-weight: 800;
+.block-spacing.button.secondary {
+  margin-top: 0.5rem;
 }
 
-/* SVG hover effect in footer */
-footer svg {
-  fill: #19181b;
-  transition: fill 0.3s;
+/* About page */
+
+#portrait {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 1.5rem auto;
 }
 
-footer svg:hover {
-  fill: #787878; /* Color when hovered */
+#about-me h2 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+/* Case study "Conia" page */
+
+.project-tags ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.project-tags li {
+  display: inline-block; /* Display list items in a line */
+  background-color: #fff; /* Background color for tags */
+  border: 0.125rem solid #552bf7;
+  color: #552bf7; /* Text color */
+  padding: 0.25rem 0.5rem; /* Padding for tags */
+  margin: 0.25rem; /* Margin between tags */
+  border-radius: 0.5rem; /* Rounded corners */
+}
+
+.project-tags a {
+  text-decoration: none;
+}
+
+.project-overview ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  column-count: 1; /* Split the list into three columns */
+  column-gap: 4rem; /* Add a gap between columns */
+}
+
+.project-overview h3 {
+  margin-top: 1.5rem;
+}
+
+.first-paragraph {
+  margin-top: 0;
+}
+
+.centered-paragraph {
+  text-align: center;
+  margin-top: 0;
+}
+
+.image-spacing {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.image-spacing-large {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.paragraph-with-border {
+  border-left: 0.25rem solid #552bf7;
+  padding-left: 1rem;
+}
+
+.box {
+  border: 0.25rem solid #552bf7;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.image-border {
+  border: 0.25rem solid #787878;
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 50%;
+  height: 50%;
+  margin-bottom: 2rem;
+}
+
+.impact-box {
+  text-align: center;
+  padding: 1rem;
+}
+
+.impact-box p {
+  margin: 0;
+}
+
+.large-text {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #552bf7;
 }
