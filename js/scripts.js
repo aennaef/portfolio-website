@@ -1,0 +1,1 @@
+console.log("Hi, welocme to my self-coded portfolio website!")
