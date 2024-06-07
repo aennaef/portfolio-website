@@ -32,8 +32,8 @@ section {
 }
 
 header .container {
-  align-items: left;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 1.6rem;
 }
 
 .hero .container {
@@ -41,7 +41,7 @@ header .container {
 }
 
 main { /* Leaves spave between header and h1 */
-  padding-block-start: 87.59px;
+  padding-block-start: 97.59px;
 }
 
 img { /* Setting image width to full screen width */
@@ -57,6 +57,12 @@ header { /* Container for navigation */
   left: 0;
   z-index: 1000;
   padding-block: 1.6rem;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 /* Navigation */
@@ -176,6 +182,16 @@ h4 {
 
 em {
   font-size: 1.2rem;
+}
+
+.hero h1 span {
+  display: block;
+  margin-top: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #19181b;
 }
 
 /* Link styling */
@@ -544,9 +560,14 @@ Medium devices (640px and larger)
     padding-block: 2rem;
   }
 
-  nav {
-    width: auto;
-    float: right;
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main { /* Leaves spave between header and h1 */
+    padding-block-start: 72px;
   }
 
   .hero .container { /* Work-page hero-section */
@@ -632,6 +653,14 @@ Large devices (1024px or larger)
 @media only screen and (min-width: 1024px) {
   header { /* General */
     padding-block: 2.4rem;
+  }
+
+  main { /* Leaves spave between header and h1 */
+    padding-block-start: 80px;
+  }
+
+  .hero h1 span {
+    font-size: 1.8rem;
   }
 
   section {
