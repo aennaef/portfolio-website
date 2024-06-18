@@ -18,19 +18,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/bb9a9cca3c.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <header>
       <div class="container">
+        <div class="navtoggle" id="myNavtoggle">
           <a href="index.html" id="brand-logo">anna fuss.</a>
           <nav>
             <ul>
               <li><a href="index.html">Work</a></li>
               <li><a href="about.html">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#contact" >Contact</a></li>
+              <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars" id="menu-icon"></i></a></li>
             </ul>
           </nav>
+        </div>
       </div>
     </header>
 
@@ -146,9 +150,9 @@
             <div class="row project-card">
               <div class="column project-card__media-wrapper">
                 <picture>
-                  <source srcset="img/conia/@1/conia_cover_img@1.png" media="(max-width:767px)" />
+                  <source srcset="img/conia/@1/conia-new-cover@1.png" media="(max-width:767px)" />
                   <img
-                    src="img/conia/@2/conia_cover_img@2.png"
+                    src="img/conia/@2/conia-cover-new@2 2.png"
                     alt="Multiple smartphones are displayed on a blue background, each showing different screens of the conia app. The screens depict features such as profiles, directories, and news. The central phone screen shows the app's gradient logo."
                   />
                 </picture>
@@ -200,6 +204,7 @@
         <p>© Anna Fuß 2024</p>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

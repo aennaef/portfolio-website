@@ -32,6 +32,7 @@ section {
 }
 
 header .container {
+  display: flex;
   align-items: flex-start;
   gap: 1.6rem;
 }
@@ -41,7 +42,7 @@ header .container {
 }
 
 main { /* Leaves spave between header and h1 */
-  padding-block-start: 97.59px;
+  padding-block-start: 64px;
 }
 
 img { /* Setting image width to full screen width */
@@ -56,13 +57,13 @@ header { /* Container for navigation */
   top: 0;
   left: 0;
   z-index: 1000;
-  padding-block: 1.6rem;
+  padding: 1.6rem;
 }
 
 header .container {
   display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+  justify-content: flex-start; /* Align items to the center */
+  padding: 0;
 }
 
 /* Navigation */
@@ -72,18 +73,87 @@ nav > ul { /* Removes bullet points from navigation */
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 4rem;
+  flex-direction: column;
 }
 
-nav > ul > li {
-  display: inline-block;
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.container .navtoggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 2rem;
+  color: #19181b;
+  padding-top: 1.6rem;
+  padding-right: 1.6rem;
+}
+
+.navtoggle.responsive {
+  position: fixed; /* Fixed positioning for full screen effect */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white; /* Full white background */
+  display: flex; /* Flexbox for centering */
+  flex-direction: column;
+  z-index: 1000;
+  padding-top: 1.6rem; /* Space at the top */
+}
+
+.navtoggle.responsive .container {
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.navtoggle.responsive nav {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navtoggle.responsive .navtoggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navtoggle.responsive nav ul {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem; /* Space between top row and menu items */
+}
+
+.navtoggle.responsive nav ul li {
+  display: block;
+  padding: 1.6rem;
+}
+
+.navtoggle.responsive #brand-logo {
+  align-self: flex-start;
+  margin-left: 1.6rem; /* Adjust margin if needed */
+}
+
+#brand-logo {
+  margin-right: 1.6rem; /* Push the brand logo to the left */
 }
 
 nav a { /* Link styling for navigation */
-  text-transform: uppercase;
+  font-family: Archivo;
   font-weight: 500;
-  font-size: 1.6rem;
-  color: #787878;
+  font-size: 2.4rem;
+  color: #19181b;
   transition: color 0.3s;
   text-decoration: none;
 }
@@ -165,19 +235,19 @@ h4 {
 }
 
 h1 {
-  font-size: 4rem; /* 40px */
+  font-size: 3.2; /* 40px */
 }
 
 h2 {
-  font-size: 3.2rem; /* 32px */
+  font-size: 2.4rem; /* 32px */
 }
 
 h3 {
-  font-size: 2.4rem; /* 24px */
+  font-size: 2rem; /* 24px */
 }
 
 h4 {
-  font-size: 2rem; /* 20px */
+  font-size: 1.8rem; /* 20px */
 }
 
 em {
@@ -192,6 +262,12 @@ em {
   font-weight: 400;
   line-height: 1.6;
   color: #19181b;
+}
+
+.small-container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Link styling */
@@ -421,18 +497,19 @@ a:active { /* Selected link */
 }
 
 .project-tags ul {
+  display: flex;
+  column-count: unset;
+  gap: 0.8rem;
   list-style: none; /* Remove default bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
 }
 
 .project-tags li {
-  display: inline-block; /* Display list items in a line */
+  display: inline-flex; /* Display list items in a line */
+  flex-direction: row;
   background-color: #fff; /* Background color for tags */
   border: 0.2rem solid #552bf7;
   color: #552bf7; /* Text color */
   padding: 0.6rem; /* Padding for tags */
-  margin: 0.4rem; /* Margin between tags */
   border-radius: 0.5rem; /* Rounded corners */
 }
 
@@ -443,13 +520,14 @@ a:active { /* Selected link */
 .project-overview ul {
   list-style: none; /* Remove default bullet points */
   padding: 0; /* Remove default padding */
-  column-count: 1; /* Split the list into three columns */
-  column-gap: 4rem; /* Add a gap between columns */
+  column-gap: 0.8rem; /* Add a gap between columns */
+  flex-wrap: wrap;
 }
 
 .project-details {
   display: flex;
   flex-direction: column;
+  gap: 2.4rem;
   margin-top: 3.2rem;
 }
 
@@ -482,6 +560,10 @@ a:active { /* Selected link */
 .media-container-subtitle {
   margin-top: 2.4rem;
   margin-bottom: 0;
+}
+
+.conia-visual-exploration .container {
+  margin-block: 6.4rem;
 }
 
 .design-improvement {
@@ -532,6 +614,7 @@ a:active { /* Selected link */
 .impact-summary {
   display: flex;
   flex-direction: column;
+  gap: 2.4rem;
   margin-top: 2.4rem;
   margin-bottom: 2.4rem;
 }
@@ -554,16 +637,70 @@ a:active { /* Selected link */
 Medium devices (640px and larger)
 ================================= */
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
   header {
     text-align: unset;
     padding-block: 2rem;
   }
 
-  header .container {
+  .container .navtoggle {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  header .container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+
+  nav > ul { /* Removes bullet points from navigation */
+    flex-direction: row;
+    justify-content: flex-end;
+    width: auto;
     align-items: center;
+    gap: 3.2rem;
+  }
+
+  nav a { /* Link styling for navigation */
+    text-transform: uppercase;
+    font-family: Open Sans, sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #787878;
+    transition: color 0.3s;
+    text-decoration: none;
+  }
+
+  nav a:visited {
+    color: #787878;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    color: #19181b;
+  }
+
+  nav a:active {
+    color: #19181b;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  .navtoggle {
+    width: 100%;
+    justify-content: space-between;
   }
 
   main { /* Leaves spave between header and h1 */
