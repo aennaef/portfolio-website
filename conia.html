@@ -18,48 +18,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/bb9a9cca3c.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <header>
       <div class="container">
-        <a href="index.html" id="brand-logo">anna fuss.</a>
-        <nav>
-          <ul>
-            <li><a href="index.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-    </div>
-    </header>
+        <div class="navtoggle" id="myNavtoggle">
+          <a href="index.html" id="brand-logo">anna fuss.</a>
+          <nav>
+            <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#contact" >Contact</a></li>
+              <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars" id="menu-icon"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      </header>
 
     <main>
+      <div class="container">
+      <div class="hero-image-conia">
+        <!-- Start section hero -->
+        <picture>
+          <source srcset="img/conia/@1/conia-new-cover@1.png" media="(max-width:767px)" />
+          <img
+            src="img/conia/@2/conia-cover-new@2 2.png"
+            alt="Multiple smartphones are displayed on a blue background, each showing different screens of the conia app. The screens depict features such as profiles, directories, and news. The central phone screen shows the app's gradient logo."
+          />
+        </picture>
+      </div>
       <section id="conia-case-study">
         <!-- Section case study conia -->
-        <div class="container">
           <!-- Start content container-->
-          <div class="hero-image-conia">
-            <!-- Start section hero -->
-            <picture>
-              <source srcset="img/conia/@1/conia_cover_img@1.png" media="(max-width:767px)" />
-              <img
-                src="img/conia/@2/conia_cover_img@2.png"
-                alt="Multiple smartphones are displayed on a blue background, each showing different screens of the conia app. The screens depict features such as profiles, directories, and news. The central phone screen shows the app's gradient logo."
-              />
-            </picture>
-          </div>
-
-          <section class="short-summary">
+          <div class="small-container short-summary">
             <div class="text-block">
               <!-- Start short summary -->
               <h1>conia – Employee app</h1>
               <p>A mobile app designed to streamline communication and enhance engagement in companies with high shares of non-desk workers.</p>
             </div>
+            </div>
           </section>
           <!-- End short summary -->
 
-          <section class="project-overview">
+          <section class="small-container project-overview">
             <!-- Start overview -->
             <h2>Project overview</h2>
             <div class="project-tags">
@@ -99,7 +103,7 @@
           </section>
           <!-- End overview -->
 
-          <section class="project-background">
+          <section class="small-container project-background">
             <!-- Start project background-->
             <div class="row background-container">
               <!-- Start row -->
@@ -130,12 +134,13 @@
           </section>
           <!-- End project background-->
 
-          <section class="conia-process">
+          <section class="small-container conia-process">
             <!-- Start conia process -->
             <div class="text-block">
               <h2>The process</h2>
               <p>
-                Due to pre-existing design and development of key app features, the process for implementation in conia couldn't be fully mapped out in the beginnig. Upon receiving the rebranded app, I took the following steps:
+                When I joined the team, the designs already existed and the features were developed. Our objective was to modify the app as little as possible and first ascertain whether customers would purchase it as it was in order to generate budget for possible adjustments.
+                Upon receiving the rebranded app, I took the following steps:
               </p>
               <ol>
                 <li>Understanding the product</li>
@@ -147,15 +152,16 @@
           </section>
           <!-- End conia process -->
 
-          <section class="conia-product-understanding">
+          <section class="small-container conia-product-understanding">
             <!-- Start conia understanding -->
-            <div>
+            <div class="text-block">
               <!--Start text -->
               <h2>Background</h2>
               <p>
                 Middle-sized companies in the production industries often struggle with ineffective employee communication practices, resulting in fragmented information flows, poor collaboration between teams, and a disconnect between
                 management and staff, ultimately leading to high fluctuation rates and decreased productivity.
               </p>
+              </div>
 
               <div class="row problem-solution">
                 <div class="box column">
@@ -181,65 +187,68 @@
                 </picture>
               </div>
               <p class="centered-paragraph"><em>Home screen from customer project.</em></p>
-            </div>
           </section>
           <!-- End conia understanding -->
 
           <section class="conia-visual-exploration" id="visualexplo">
             <!--Start visual exploration-->
-            <div class="text-block">
+            <div class="small-container text-block">
               <h2>Expanding the app’s visual language</h2>
               <p>
-                My first objective after obtaining the newly branded app was to expand the brand's visual language to ensure consistency and appeal. To accomplish this, I began creating onboarding screens that not only introduced users to
-                the app's functions, but also developed a consistent visual brand. I experimented with several visual directions, and in total, 36 distinct screens were created.
+                While the majority of the app had already been designed, no onboarding process was in place yet. 
+                Thus, my first objective was to create a user-friendly onboarding process.
+                As the app had previously been kept very neutral, I used this opportunity to bring some distinctive character to it 
+                and explored different design directions to further develop the brand's personality.
+                I experimented with several visual directions, and in total, 36 distinct screens were created.
               </p>
-              <div class="media-container">
+              </div>
+              <div class="container">
                 <picture>
-                  <source srcset="img/conia/@1/conia_4.png" media="(max-width:767px)" />
+                  <source srcset="img/conia/@1/conia-visual-explo@1.png" media="(max-width:767px)" />
                   <img
-                    src="img/conia/@2/conia_4.png"
+                    src="img/conia/@2/conia-visual-explo@2.png"
                     alt="A set of 12 mobile app screens showcasing various features of a digital platform. Screens include user profile setups, search functions, notifications, data charts, and interaction illustrations with people and icons, displayed in a clean, modern design style."
                   />
                 </picture>
               </div>
-
-              <div class="text-block">
-                <h3>Preference test</h3>
+            
+              <section class="small-container text-block">
+                <h2>Preference test</h2>
                 <p>
-                  To determine the visual direction, I conducted a preference test between my two favourite sets (n = 27). I found that nearly two-thirds of the participants preferred the variant with gradient bubbles. Based on this result,
+                  To determine the visual direction, I conducted a preference test between our team's favourite sets (n = 27). I found that nearly two-thirds of the participants preferred the variant with gradient bubbles. Based on this result,
                   I proceeded confidently with this direction.
                 </p>
+              </section>
 
-                <div class="media-container">
+                <div class="container">
                   <picture>
-                    <source srcset="img/conia/@1/conia_5-6.png" media="(max-width:767px)" />
+                    <source srcset="img/conia/@1/conia-test@1.png" media="(max-width:767px)" />
                     <img
-                      src="img/conia/@2/conia_5-6.png"
+                      src="img/conia/@2/conia-test@2.png"
                       alt="Four mobile screens display two color variants. The two screens on the left are green and purple and show a search bar for employees and ordering forms. The sreens on the right show an employee search and ordering forms as well but are styled in a purple and green gradient."
                     />
                   </picture>
                 </div>
-              </div>
-              <div>
+          
+              <div class="container">
                 <h3>Onboarding screens</h3>
                 <div class="media-container-subtitle">
                   <picture>
-                    <source srcset="img/conia/@1/conia_7.png" media="(max-width:767px)" />
+                    <source srcset="img/conia/@1/conia-onboarding-screens@1.png" media="(max-width:767px)" />
                     <img
-                      src="img/conia/@2/conia_7.png"
+                      src="img/conia/@2/conia-onboarding-screens@2.png"
                       alt="A series of five mobile screens showcasing an conia's onboarding interface with features like password protection, news articles, surveys, employee management, and notifications. The layout is clean with white backgrounds, blue-green and purple accents, and minimal text."
                     />
                   </picture>
                 </div>
                 <p><em>Note: Due to limited resources at this time, it was ultimately decided not to implement onboarding walkthrough screens (3-6), but they may be implemented in the future.</em></p>
               </div>
-            </div>
           </section>
           <!--End visual exploration-->
 
           <section class="conia-design-improvements" id="redesign">
-            <div class="text-block">
               <!--Start design improvements-->
+              <div class="small-container">
               <div class="text-block">
                 <h2>Design improvements</h2>
                 <p>
@@ -290,7 +299,7 @@
           </section>
           <!--End design improvements -->
 
-          <section class="new-features" id="flows-wireframes">
+          <section class="new-features small-container" id="flows-wireframes">
             <!--Start new features -->
             <div class="text-block">
               <h2>New features</h2>
@@ -379,8 +388,9 @@
           </section>
           <!--End design new features-->
 
-          <section class="high-fidelity-ui" id="hfui">
+          <section class=" high-fidelity-ui" id="hfui">
             <!--Start high-fidelity UI-->
+            <div class="small-container">
             <h2>High-fidelity UI</h2>
             <div class="row feature-content">
               <div class="column media-container">
@@ -405,7 +415,7 @@
               <div class="column text-block">
                 <h3>Feedback</h3>
                 <p>
-                  The feedback feature with the option to upload photos empowers users to directly voice concerns or report broken infrastructure to their employer benabling organizational improvements, and enhancing workplace satisfaction
+                  The feedback feature with the option to upload photos empowers users to directly voice concerns or report broken infrastructure to their employer enabling organizational improvements, and enhancing workplace satisfaction
                   and productivity.
                 </p>
               </div>
@@ -440,12 +450,23 @@
                 </p>
               </div>
             </div>
+          </div>
+
+            <div class="container">
+            <picture>
+              <source srcset="img/conia/@1/conia-hfui@1.png" media="(max-width:767px)" />
+              <img
+                src="img/conia/@2/conia-hfui@2.png"
+                alt="Three smartphones displaying conia's chat feature. From left to right: the first shows a contacts list with profile pictures, names, and last message snippets; the second, a message screen with a new message option; the third, an active chat conversation."
+              />
+            </picture>
+          </div>
           </section>
           <!--End high-fidelity UI-->
 
           <section class="the-impact">
             <!--Start impact-->
-            <div class="text block">
+            <div class="small-container text block">
               <h2>The impact</h2>
               <div class="row impact-summary">
                 <div class="column impact-box">
@@ -463,13 +484,13 @@
                 </div>
               </div>
               <p>
-                <em>Source: Comprehensive extrapolation based on <a href="http://conia.app/" target="_blank">bytabo data.</a></em>
+                <em>Source: Comprehensive extrapolation based on <a href="http://conia.app/" target="_blank">conia data.</a></em>
               </p>
             </div>
           </section>
           <!--End impact-->
 
-          <section class="takeaways">
+          <section class="small-container takeaways">
             <div class="text-block">
               <!--Start takeaways-->
               <h2>My takeaways</h2>
@@ -497,15 +518,15 @@
                 resulting in delays and some features (feedback & chat) not being developed (yet).
               </p>
             </div>
+            <div>
+              <a href="#conia-case-study" class="right-link">Back to top</a>
+            </div>
           </section>
           <!--End takeaways-->
-          <div>
-            <a href="#conia-case-study" class="right-link">Back to top</a>
-          </div>
-        </div>
         <!-- End container -->
       </section>
       <!-- End section case study conia -->
+    </div>
     </main>
 
     <footer id="contact">
@@ -542,6 +563,7 @@
       </div>
       <p>© Anna Fuß 2024</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
