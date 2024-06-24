@@ -827,6 +827,11 @@ Large devices (1024px or larger)
     gap: 2.4rem;
   }
 
+  .hero-about {
+    margin-top: 2.4rem;
+    margin-bottom: 4.8rem;
+  }
+
   .about-me { /* About me page */
     display: flex;
     flex-direction: row;
