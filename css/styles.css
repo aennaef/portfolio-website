@@ -21,7 +21,8 @@ section {
   padding-bottom: 2.4rem; /* Margin top and bottom */
 }
 
-.container { /* Content container on all pages */
+.container {
+  /* Content container on all pages */
   padding-inline: 1.6rem;
   max-width: 1200px;
   margin-left: auto;
@@ -41,15 +42,22 @@ header .container {
   gap: 1rem;
 }
 
-main { /* Leaves spave between header and h1 */
+main {
+  /* Leaves spave between header and h1 */
   padding-block-start: 64px;
 }
 
-img { /* Setting image width to full screen width */
+img {
+  /* Setting image width to full screen width */
   width: 100%;
 }
 
-header { /* Container for navigation */
+.zoomContainer .zoomLens {
+  cursor: url("img/magnifying-glass-plus-solid.svg"), auto;
+}
+
+header {
+  /* Container for navigation */
   background-color: #fff;
   text-align: left;
   position: fixed;
@@ -68,7 +76,8 @@ header .container {
 
 /* Navigation */
 
-nav > ul { /* Removes bullet points from navigation */
+nav > ul {
+  /* Removes bullet points from navigation */
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -149,7 +158,8 @@ nav > ul { /* Removes bullet points from navigation */
   margin-right: 1.6rem; /* Push the brand logo to the left */
 }
 
-nav a { /* Link styling for navigation */
+nav a {
+  /* Link styling for navigation */
   font-family: Archivo;
   font-weight: 500;
   font-size: 2.4rem;
@@ -188,7 +198,8 @@ footer {
   padding-bottom: 4.8em;
 }
 
-footer svg { /* SVG hover effect in footer */
+footer svg {
+  /* SVG hover effect in footer */
   fill: #19181b;
   transition: fill 0.3s;
   border: 0.16rem;
@@ -196,7 +207,8 @@ footer svg { /* SVG hover effect in footer */
   margin-bottom: 0.5rem;
 }
 
-footer svg:hover { /* Color when hovered */
+footer svg:hover {
+  /* Color when hovered */
   fill: #787878;
 }
 
@@ -235,19 +247,19 @@ h4 {
 }
 
 h1 {
-  font-size: 3.2; /* 40px */
+  font-size: 3.2rem; /* 32px */
 }
 
 h2 {
-  font-size: 2.4rem; /* 32px */
+  font-size: 2.4rem; /* 24px */
 }
 
 h3 {
-  font-size: 2rem; /* 24px */
+  font-size: 2rem; /* 20px */
 }
 
 h4 {
-  font-size: 1.8rem; /* 20px */
+  font-size: 1.8rem; /* 18px */
 }
 
 em {
@@ -277,7 +289,8 @@ a {
   transition: color 0.3s; /* Smooth transition */
 }
 
-a:visited { /* Visited link */
+a:visited {
+  /* Visited link */
   color: #552bf7;
 }
 
@@ -286,7 +299,8 @@ a:focus {
   color: #af9bff; /* Switching colors when hovering over a link */
 }
 
-a:active { /* Selected link */
+a:active {
+  /* Selected link */
   color: #552bf7;
 }
 
@@ -342,11 +356,13 @@ a:active { /* Selected link */
   flex-direction: column; /* Default for smaller screens */
 }
 
-.column { /* Flex properties for columns */
+.column {
+  /* Flex properties for columns */
   flex: 1; /* Default to make columns take equal width */
 }
 
-.hero-content { /* Specific styles for the hero content and media */
+.hero-content {
+  /* Specific styles for the hero content and media */
   order: 1; /* Default order */
 }
 
@@ -568,9 +584,8 @@ a:active { /* Selected link */
 
 .design-improvement {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 3.2rem;
-  margin-bottom: 1.6rem;
 }
 
 .new-features .text-block {
@@ -655,7 +670,8 @@ Medium devices (640px and larger)
     gap: 0.8rem;
   }
 
-  nav > ul { /* Removes bullet points from navigation */
+  nav > ul {
+    /* Removes bullet points from navigation */
     flex-direction: row;
     justify-content: flex-end;
     width: auto;
@@ -663,9 +679,10 @@ Medium devices (640px and larger)
     gap: 3.2rem;
   }
 
-  nav a { /* Link styling for navigation */
+  nav a {
+    /* Link styling for navigation */
     text-transform: uppercase;
-    font-family: Open Sans, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 500;
     font-size: 1.6rem;
     color: #787878;
@@ -703,11 +720,13 @@ Medium devices (640px and larger)
     justify-content: space-between;
   }
 
-  main { /* Leaves spave between header and h1 */
+  main {
+    /* Leaves spave between header and h1 */
     padding-block-start: 72px;
   }
 
-  .hero .container { /* Work-page hero-section */
+  .hero .container {
+    /* Work-page hero-section */
     flex-direction: row; /* Align items in a row for larger screens */
     justify-content: space-between;
     align-items: center;
@@ -746,7 +765,8 @@ Medium devices (640px and larger)
     gap: 2.4rem;
   }
 
-  .wrapper-skills-tools { /* About me page */
+  .wrapper-skills-tools {
+    /* About me page */
     flex-direction: row;
     gap: 1.6rem;
     margin-top: 1.6rem;
@@ -760,7 +780,8 @@ Medium devices (640px and larger)
     flex: 1;
   }
 
-  .design-improvement { /* Case study page */
+  .design-improvement {
+    /* Case study page */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -777,6 +798,12 @@ Medium devices (640px and larger)
     align-items: center;
   }
 
+  .row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
   .impact-summary {
     display: flex;
     flex-direction: row;
@@ -788,11 +815,13 @@ Large devices (1024px or larger)
 ================================= */
 
 @media only screen and (min-width: 1024px) {
-  header { /* General */
+  header {
+    /* General */
     padding-block: 2.4rem;
   }
 
-  main { /* Leaves spave between header and h1 */
+  main {
+    /* Leaves spave between header and h1 */
     padding-block-start: 80px;
   }
 
@@ -821,7 +850,8 @@ Large devices (1024px or larger)
     font-size: 2rem;
   }
 
-  .column .hero-content { /* Work-page hero-section */
+  .column .hero-content {
+    /* Work-page hero-section */
     display: flex;
     flex-direction: row;
     gap: 2.4rem;
@@ -832,7 +862,8 @@ Large devices (1024px or larger)
     margin-bottom: 4.8rem;
   }
 
-  .about-me { /* About me page */
+  .about-me {
+    /* About me page */
     display: flex;
     flex-direction: row;
     gap: 6.4rem;
@@ -852,7 +883,8 @@ Large devices (1024px or larger)
     flex: 1;
   }
 
-  .project-details {   /* Case study page */
+  .project-details {
+    /* Case study page */
     display: flex;
     flex-direction: row;
   }
