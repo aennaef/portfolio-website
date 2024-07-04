@@ -43,6 +43,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Add the code to manage the active class on navigation links
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach(link => {
+  link.addEventListener("click", function() {
+    // Remove the active class from all links
+    navLinks.forEach(navLink => navLink.classList.remove("active"));
+    
+    // Add the active class to the clicked link
+    this.classList.add("active");
+  });
+});
+
 // Add zoom function for images
 $(document).ready(function () {
   $("#zoom-image").ezPlus({
@@ -56,3 +68,4 @@ $(document).ready(function () {
     $(this).parent("a").click();
   });
 });
+

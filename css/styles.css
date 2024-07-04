@@ -52,10 +52,6 @@ img {
   width: 100%;
 }
 
-.zoomContainer .zoomLens {
-  cursor: url("img/magnifying-glass-plus-solid.svg"), auto;
-}
-
 header {
   /* Container for navigation */
   background-color: #fff;
@@ -169,7 +165,7 @@ nav a {
 }
 
 nav a:visited {
-  color: #787878;
+  color: #19181b;
 }
 
 nav a:hover,
@@ -180,6 +176,7 @@ nav a:focus {
 nav a:active {
   color: #19181b;
 }
+
 
 #brand-logo {
   color: #19181b;
@@ -242,7 +239,8 @@ ul,
 h1,
 h2,
 h3,
-h4 {
+h4
+h5 {
   margin-block: 0;
 }
 
@@ -260,6 +258,14 @@ h3 {
 
 h4 {
   font-size: 1.8rem; /* 18px */
+}
+
+h5 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #552bf7;
+  font-weight: 400;
+  margin-bottom: 0rem;
 }
 
 em {
@@ -551,6 +557,10 @@ a:active {
   margin-bottom: 2.4rem;
 }
 
+.conia-process p {
+margin-bottom: 5.6rem;
+}
+
 .background-container {
   display: flex;
   flex-direction: column;
@@ -579,7 +589,11 @@ a:active {
 }
 
 .conia-visual-exploration .container {
-  margin-block: 6.4rem;
+  margin-block: 3.2rem;
+}
+
+.conia-visual-exploration .small-container {
+  margin-block: 0rem;
 }
 
 .design-improvement {
@@ -591,6 +605,11 @@ a:active {
 .new-features .text-block {
   margin-bottom: 3.2rem;
 }
+
+.zoomContainer .zoomLens {
+  cursor: url("img/magnifying-glass-plus-solid.svg"), auto;
+}
+
 
 .feature-content {
   display: flex;
@@ -681,7 +700,6 @@ Medium devices (640px and larger)
 
   nav a {
     /* Link styling for navigation */
-    text-transform: uppercase;
     font-family: "Open Sans", sans-serif;
     font-weight: 500;
     font-size: 1.6rem;
@@ -702,6 +720,17 @@ Medium devices (640px and larger)
   nav a:active {
     color: #19181b;
   }
+
+  nav a.active {
+    text-decoration: underline;
+    color: #19181b;
+  }
+
+  nav a[href="#contact"].active {
+    text-decoration: none; /* Remove underline for the Contact link */
+    color: #787878;
+  }
+
 
   nav > ul > li {
     display: inline-block;
@@ -836,6 +865,10 @@ Large devices (1024px or larger)
 
   h1 {
     font-size: 5.6rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
   }
 
   p {
