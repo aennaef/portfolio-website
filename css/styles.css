@@ -606,8 +606,16 @@ margin-bottom: 5.6rem;
   margin-bottom: 3.2rem;
 }
 
-.zoomContainer .zoomLens {
-  cursor: url("img/magnifying-glass-plus-solid.svg"), auto;
+#zoom-image1 {
+  cursor:zoom-in;
+}
+
+#zoom-image2 {
+  cursor:zoom-in;
+}
+
+#zoom-image3 {
+  cursor:zoom-in;
 }
 
 
@@ -723,6 +731,7 @@ Medium devices (640px and larger)
 
   nav a.active {
     text-decoration: underline;
+    text-underline-offset: 6px;
     color: #19181b;
   }
 
